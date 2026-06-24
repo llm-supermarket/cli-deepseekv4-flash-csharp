@@ -5,7 +5,7 @@
   "architecture": {
     "64bit": {
       "url": "https://github.com/yetanotherchris/rclone-encrypt-deepseek-csharp/releases/download/v0.1.0/rclone-encrypt-deepseek-csharp-windows-amd64.exe",
-      "hash": "9b1b4bbe8b816557a5c8a8912302fc34c2f4afbdc6dee3025de7b56377431b7d",
+      "hash": "dea5102824817715d85ccb547da31cc36a83ec965691c9c4c12ef90c7e7510e5",
       "bin": [
         [
           "rclone-encrypt-deepseek-csharp-windows-amd64.exe",

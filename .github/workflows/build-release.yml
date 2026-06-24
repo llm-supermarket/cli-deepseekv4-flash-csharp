@@ -53,14 +53,14 @@ jobs:
         if: runner.os != 'Windows'
         shell: bash
         run: |
-          dotnet publish src/rclone-encrypt-deepseek-csharp/rclone-encrypt-deepseek-csharp.csproj -c Release -r ${{ matrix.rid }} --self-contained true -p:PublishSingleFile=true -p:EnableCompressionInSingleFile=true -p:DebugType=embedded -o publish
+          dotnet publish src/rclone-encrypt-deepseek-csharp/rclone-encrypt-deepseek-csharp.csproj -c Release -r ${{ matrix.rid }} --self-contained true -p:PublishSingleFile=true -p:DebugType=embedded -o publish
           mv publish/rclone-encrypt-deepseek-csharp publish/rclone-encrypt-deepseek-csharp-${{ matrix.suffix }}
           tar czf rclone-encrypt-deepseek-csharp-${{ matrix.suffix }}.tar.gz -C publish rclone-encrypt-deepseek-csharp-${{ matrix.suffix }}
       - name: Build (windows)
         if: runner.os == 'Windows'
         shell: pwsh
         run: |
-          dotnet publish src/rclone-encrypt-deepseek-csharp/rclone-encrypt-deepseek-csharp.csproj -c Release -r ${{ matrix.rid }} --self-contained true -p:PublishSingleFile=true -p:EnableCompressionInSingleFile=true -p:DebugType=embedded -o publish
+          dotnet publish src/rclone-encrypt-deepseek-csharp/rclone-encrypt-deepseek-csharp.csproj -c Release -r ${{ matrix.rid }} --self-contained true -p:PublishSingleFile=true -p:DebugType=embedded -o publish
           Move-Item -Path publish/rclone-encrypt-deepseek-csharp.exe -Destination publish/rclone-encrypt-deepseek-csharp-windows-amd64.exe
       - name: Upload artifact (unix)
         if: runner.os != 'Windows'
