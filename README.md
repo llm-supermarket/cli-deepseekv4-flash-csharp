@@ -1,4 +1,4 @@
-# cli-deepseek-csharp
+# cli-deepseekv4-flash-csharp
 A small CLI tool that encrypts and decrypts using the rclone encryption defaults. Written in C# and published as a single-file, self-contained binary for Windows, macOS, and Linux.
 
 Rclone uses a custom salt if no salt is provided, which this tool will use by default. A few similar tools:
